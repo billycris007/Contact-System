@@ -77,10 +77,10 @@ $('#search').keypress(function(e) {
                                 <td>
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <span><a href="/contact/edit-form/${contact.id}">Edit</a></span>
+                                            <span><a href="/contact/edit/${contact.id}">Edit</a></span>
                                         </div>
                                         <div class="col-md-6">
-                                            <form method="POST" action="/contact/destroy/${contact.id}" onsubmit="return confirm('Are you sure you want to delete this contact?');">
+                                            <form method="POST" action="/contacts/delete/${contact.id}" onsubmit="return confirm('Are you sure you want to delete this contact?');">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button class="dropdown-item" type="submit">
