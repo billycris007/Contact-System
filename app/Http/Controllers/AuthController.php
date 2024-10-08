@@ -12,9 +12,20 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
+     public function __construct()
+     {
+          if(Auth::user()){
+               return redirect('/contacts');
+          }
+     }
+     
      public function index(){
-
-          return view('pages.auth.index');
+          if(Auth::user()){
+               return redirect('/contacts');
+          }else{
+               return view('pages.auth.index');
+          }
+          
      }
 
      public function register(){
@@ -74,7 +85,7 @@ class AuthController extends Controller
                'email' => $request->input('email'),
                'password' => $request->input('password')
           ];
-          
+
           if (Auth::attempt($credentials)) {
                $request->session()->regenerate();
                return redirect()->intended('/contacts');

@@ -9,7 +9,7 @@
             </div>
             <div class="col-md-4 text-end">
                 <span><a href="{{route('contact.form')}}">Add Contact</a></span> |
-                <span><a href="{{route('contacts')}}">Contacts</a></span> |
+                <span>Contacts</span> |
                 <span><a href="{{route('logout')}}">Logout</a></span>
             </div>
         </div>
@@ -19,11 +19,11 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Company</th>
-                    <th>Phone</th>
-                    <th>Email</th>
-                    <th>Action</th>
+                    <th>NAME</th>
+                    <th>COMPANY</th>
+                    <th>PHONE</th>
+                    <th>EMAIL</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody id="contact-body">
